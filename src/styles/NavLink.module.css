@@ -1,13 +1,18 @@
+.default{
+    font-weight: 500;
+    letter-spacing: 0.1px;
+}
+
 .container {
+    composes:default; 
     display: flex;
     align-items: center;
     width:fit-content;
     gap: 0.4rem;
-    font-weight: 500;
     vertical-align: middle;
     line-height: 20px;
-    letter-spacing: 0.1px;
 }
+
 
 .container span{
     display: block;

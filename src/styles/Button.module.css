@@ -1,0 +1,12 @@
+.button{
+    padding-block: 8px;
+    padding-inline: 16px;
+    border-radius: 999px;
+    border: none;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.button_border{
+    border: 1px solid black;
+}

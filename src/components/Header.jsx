@@ -1,19 +1,22 @@
 import NavLink from "./NavLink";
-import { Gothic_A1 } from "next/font/google";
 import styles from "../styles/Header.module.css";
 import BrandLogo from "./BrandLogo";
 import ThreeDotMenu from "./ThreeDotMenu";
 import Button from "./Button";
 
 const navList = [
-  { label: "Product", hasDropdownIcon: true },
-  { label: "Key Features", hasDropdownIcon: false },
-  { label: "Why Wetrack", hasDropdownIcon: true },
-  { label: "Applications", hasDropdownIcon: true },
-  { label: "Careers", hasDropdownIcon: false },
-  { label: "Pricing", hasDropdownIcon: false },
+  { id: 1, label: "Product", hasDropdownIcon: true },
+  { id: 2, label: "Key Features", hasDropdownIcon: false },
+  { id: 3, label: "Why Wetrack", hasDropdownIcon: true },
+  { id: 4, label: "Applications", hasDropdownIcon: true },
+  { id: 5, label: "Careers", hasDropdownIcon: false },
+  { id: 6, label: "Pricing", hasDropdownIcon: false },
 ].map((item) => (
-  <NavLink label={item.label} hasDropdownIcon={item.hasDropdownIcon} />
+  <NavLink
+    key={item.id}
+    label={item.label}
+    hasDropdownIcon={item.hasDropdownIcon}
+  />
 ));
 
 const Header = () => {

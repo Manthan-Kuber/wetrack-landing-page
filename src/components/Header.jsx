@@ -3,6 +3,7 @@ import { Gothic_A1 } from "next/font/google";
 import styles from "../styles/Header.module.css";
 import BrandLogo from "./BrandLogo";
 import ThreeDotMenu from "./ThreeDotMenu";
+import Button from "./Button";
 
 const gothic = Gothic_A1({
   subsets: ["latin"],
@@ -22,12 +23,18 @@ const navList = [
 
 const Header = () => {
   return (
-    <header className={gothic.className}>
-      <BrandLogo />
-      <nav>
-        <ul className={styles.list}>{navList}</ul>
-      </nav>
-      <ThreeDotMenu />
+    <header className={`${gothic.className} ${styles.container}`}>
+      <div className={styles.flex} >
+        <BrandLogo />
+        <nav>
+          <ul className={styles.list}>{navList}</ul>
+        </nav>
+      </div>
+      <div className={styles.flex} >
+        <ThreeDotMenu />
+        <Button hasBorder bgColor="white" >Log In</Button>
+        <Button hasBorder txtColor="white" bgColor="black" >Try for free</Button>
+      </div>
     </header>
   );
 };

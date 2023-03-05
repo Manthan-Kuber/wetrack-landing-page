@@ -6,3 +6,17 @@
 .list li {
     list-style: none;
 }
+
+.flex{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.container{
+    composes:flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-bottom: 2px solid black;
+}
+

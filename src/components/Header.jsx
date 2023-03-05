@@ -1,6 +1,7 @@
 import NavLink from "./NavLink";
 import { Gothic_A1 } from "next/font/google";
 import styles from "../styles/Header.module.css";
+import BrandLogo from "./BrandLogo";
 
 const gothic = Gothic_A1({
   subsets: ["latin"],
@@ -21,6 +22,7 @@ const navList = [
 const Header = () => {
   return (
     <header className={gothic.className}>
+      <BrandLogo />
       <nav>
         <ul className={styles.list}>{navList}</ul>
       </nav>

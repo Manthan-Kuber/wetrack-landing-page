@@ -2,6 +2,7 @@ import NavLink from "./NavLink";
 import { Gothic_A1 } from "next/font/google";
 import styles from "../styles/Header.module.css";
 import BrandLogo from "./BrandLogo";
+import ThreeDotMenu from "./ThreeDotMenu";
 
 const gothic = Gothic_A1({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ const Header = () => {
       <nav>
         <ul className={styles.list}>{navList}</ul>
       </nav>
+      <ThreeDotMenu />
     </header>
   );
 };

@@ -17,15 +17,15 @@
 .right_arrow {
     width: 0; 
     height: 0; 
-    border-top: 12px solid transparent;
-    border-bottom: 12px solid transparent;
-    border-left: 12px solid white;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 9px solid white;
     border-radius: 2px;
   }
 
 .line{
     width: 3px;
-    height: 22px;
+    height: 18px;
     background-color: gray;
     border-radius: 6px;
 }

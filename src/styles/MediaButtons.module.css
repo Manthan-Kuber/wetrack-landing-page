@@ -1,0 +1,48 @@
+.container {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    width: fit-content;
+    border-radius: 1.5rem;
+}
+
+.grid{
+    display: grid;
+    place-items: center;
+}
+
+.pause {
+    composes:grid;
+    background-color: white;
+    padding-block: 1rem;
+    padding-inline:1.25rem ;
+    border-radius: 50%;
+}
+
+.line{
+    width: 3px;
+    height: 16px;
+    background-color: black;
+    border-radius: 6px;
+}
+
+.line_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+}
+
+.stop {
+    composes:grid;
+    background-color:#252525 ;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.stop > div {
+    background-color: white;
+    padding: 9px;
+    border-radius: 2px;
+}

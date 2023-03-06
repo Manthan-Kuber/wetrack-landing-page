@@ -1,9 +1,10 @@
 import Head from "next/head";
 import Header from "@/components/Header";
 import styles from "../styles/Home.module.css";
-import { Gothic_A1, Zilla_Slab } from "next/font/google";
+import { Gothic_A1, Zilla_Slab, Rubik } from "next/font/google";
 import Button from "@/components/Button";
 import IconsList from "@/components/IconsList";
+import MediaButtons from "@/components/MediaButtons";
 
 const gothic = Gothic_A1({
   subsets: ["latin"],
@@ -14,6 +15,12 @@ const zilla = Zilla_Slab({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--zilla-font",
+});
+
+const rubik = Rubik({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--rubik-font",
 });
 
 export default function Home() {
@@ -52,7 +59,31 @@ export default function Home() {
             <IconsList />
           </div>
         </div>
-        <div>he</div>
+        <div>
+          {/* Project */}
+          <div className={styles.project}>
+            <div className={styles.project_name}>
+              <span>AMAZON PROJECT</span>
+              <span>TUE,30 AUG</span>
+            </div>
+            <span>Architecture Analysis</span>
+            <div className={styles.project_timer_wrapper}>
+              <MediaButtons />
+              <span className={`${styles.timer} ${rubik.variable}`}>1:38:47</span>
+            </div>
+          </div>
+          {/* Employee  */}
+          <div></div>
+          {/* Double card */}
+          <div>
+            {/* Card 1 */}
+            <div></div>
+            {/* Card 2  */}
+            <div></div>
+          </div>
+        </div>
+        {/* List of smol cards/tags */}
+        <div></div>
       </main>
     </div>
   );

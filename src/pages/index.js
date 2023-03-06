@@ -30,7 +30,7 @@ const rubik = Rubik({
   variable: "--rubik-font",
 });
 
-const CardRowList = [
+const DesignCardRowList = [
   {
     id: 1,
     title: "Design System",
@@ -63,6 +63,43 @@ const CardRowList = [
     avatar1={avatar1}
     avatar2={avatar2}
     hasSeparator={hasSeparator}
+  />
+));
+
+const FrontEndRowList = [
+  {
+    id: 1,
+    title: "Update Components",
+    time: "27:40:12",
+    avatar1: olga,
+    avatar2: nico,
+    hasSeparator: true,
+  },
+  {
+    id: 2,
+    title: "Perform Login Flow",
+    time: "34:28:35",
+    avatar1: nico,
+    avatar2: vicky,
+    hasSeparator: true,
+  },
+  {
+    id: 3,
+    title: "Micro Interactions",
+    time: "19:35:54",
+    avatar1: olga,
+    avatar2: vicky,
+    hasSeparator: false,
+  },
+].map(({ id, time, title, avatar1, avatar2, hasSeparator }) => (
+  <CardRow
+    key={id}
+    time={time}
+    title={title}
+    avatar1={avatar1}
+    avatar2={avatar2}
+    hasSeparator={hasSeparator}
+    checkBoxColor="white"
   />
 ));
 
@@ -161,10 +198,15 @@ export default function Home() {
                     3 Tasks
                   </Tag>
                 </div>
-                {CardRowList}
+                {DesignCardRowList}
               </div>
               {/* Card 2  */}
-              <div></div>
+              <div className={styles.doublecard_frontend}>
+                <Tag bgColor={"#5cd669"} txtColor="black">
+                  Front End
+                </Tag>
+                {FrontEndRowList}
+              </div>
             </div>
           </div>
           {/* List of smol cards/tags */}

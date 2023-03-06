@@ -122,6 +122,7 @@
 
 .doublecard{
     position: relative;
+    display: flex;
 }
 
 .doublecard_design{
@@ -131,6 +132,16 @@
 .doublecard_design_tag_wrapper{
     display: flex;
     justify-content: space-between;
+}
+
+.doublecard_frontend{
+    composes:card;
+    padding: 1.625rem;
+    border-radius: 0;
+    background-color: black;
+    position: absolute;
+    right: 12rem;
+    color: white;
 }
 
 

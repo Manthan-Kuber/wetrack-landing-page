@@ -1,12 +1,22 @@
 import styles from "../styles/CardRow.module.css";
 import Avatar from "./Avatar";
 
-const CardRow = ({ title, time, avatar1, avatar2, hasSeparator }) => {
+const CardRow = ({
+  title,
+  time,
+  avatar1,
+  avatar2,
+  hasSeparator,
+  checkBoxColor,
+}) => {
   return (
     <>
       <div className={styles.container}>
         <div className={styles.flex}>
-          <div className={styles.outline_circle} />
+          <div
+            className={styles.outline_circle}
+            style={{ borderColor: checkBoxColor }}
+          />
           <span className={styles.title}>{title}</span>
         </div>
         <div className={styles.flex}>

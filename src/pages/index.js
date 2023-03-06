@@ -202,9 +202,11 @@ export default function Home() {
               </div>
               {/* Card 2  */}
               <div className={styles.doublecard_frontend}>
-                <Tag bgColor={"#5cd669"} txtColor="black">
-                  Front End
-                </Tag>
+                <div style={{marginBottom:"1.5rem",marginTop:"0.5rem"}} >
+                  <Tag bgColor={"#5cd669"} txtColor="black">
+                    Front End
+                  </Tag>
+                </div>
                 {FrontEndRowList}
               </div>
             </div>

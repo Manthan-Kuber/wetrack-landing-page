@@ -127,6 +127,8 @@
 
 .doublecard_design{
     composes:card;
+    z-index: 2;
+    background-color: white;
 }
 
 .doublecard_design_tag_wrapper{
@@ -136,7 +138,6 @@
 
 .doublecard_frontend{
     composes:card;
-    padding: 1.625rem;
     border-radius: 0;
     background-color: black;
     position: absolute;

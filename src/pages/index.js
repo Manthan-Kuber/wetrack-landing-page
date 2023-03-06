@@ -58,14 +58,15 @@ const DesignCardRowList = [
     hasSeparator: false,
   },
 ].map(({ id, time, title, avatar1, avatar2, hasSeparator }) => (
-  <CardRow
-    key={id}
-    time={time}
-    title={title}
-    avatar1={avatar1}
-    avatar2={avatar2}
-    hasSeparator={hasSeparator}
-  />
+  <li key={id}>
+    <CardRow
+      time={time}
+      title={title}
+      avatar1={avatar1}
+      avatar2={avatar2}
+      hasSeparator={hasSeparator}
+    />
+  </li>
 ));
 
 const FrontEndRowList = [
@@ -94,17 +95,74 @@ const FrontEndRowList = [
     hasSeparator: false,
   },
 ].map(({ id, time, title, avatar1, avatar2, hasSeparator }) => (
-  <CardRow
-    key={id}
-    time={time}
-    title={title}
-    avatar1={avatar1}
-    avatar2={avatar2}
-    hasSeparator={hasSeparator}
-    checkBoxColor="white"
-  />
+  <li key={id}>
+    <CardRow
+      time={time}
+      title={title}
+      avatar1={avatar1}
+      avatar2={avatar2}
+      hasSeparator={hasSeparator}
+      checkBoxColor="white"
+    />
+  </li>
 ));
 
+const outlineCircle = <div className={styles.outline_circle} />;
+
+const TaskList = [
+  {
+    id: 1,
+    Icon: outlineCircle,
+    taskName: "Interesting Analysis",
+    bgColor: "white",
+    txtColor: "black",
+  },
+  {
+    id: 2,
+    Icon: outlineCircle,
+    taskName: "Create AM-5 Wireframes",
+    bgColor: "white",
+    txtColor: "black",
+  },
+  {
+    id: 3,
+    Icon: outlineCircle,
+    taskName: "Update BE-1 Userflow",
+    bgColor: "white",
+    txtColor: "black",
+  },
+  {
+    id: 4,
+    Icon: outlineCircle,
+    taskName: "Platform Structure",
+    bgColor: "#f59fec",
+    txtColor: "black",
+  },
+  {
+    id: 5,
+    Icon: outlineCircle,
+    taskName: "Design System",
+    bgColor: "#534fff",
+    txtColor: "white",
+  },
+  {
+    id: 6,
+    Icon: <AiFillPlusCircle />,
+    taskName: "5 more tasks",
+    bgColor: "#5bd568",
+    txtColor: "black",
+  },
+].map(({ id, Icon, taskName, bgColor, txtColor }) => (
+  <li key={id}>
+    <Task
+      Icon={Icon}
+      taskName={taskName}
+      bgColor={bgColor}
+      txtColor={txtColor}
+      hasBorder
+    />
+  </li>
+));
 
 export default function Home() {
   return (
@@ -204,7 +262,7 @@ export default function Home() {
                       3 Tasks
                     </Tag>
                   </div>
-                  {DesignCardRowList}
+                  <ul>{DesignCardRowList}</ul>
                 </div>
                 {/* Card 2  */}
                 <div className={styles.doublecard_frontend}>
@@ -213,26 +271,15 @@ export default function Home() {
                       Front End
                     </Tag>
                   </div>
-                  {FrontEndRowList}
+                  <ul>{FrontEndRowList}</ul>
                 </div>
               </div>
             </div>
           </div>
           {/* List of smol task list */}
-          <div>
-            <Task
-              taskName="Interesting Analysis"
-              hasBorder
-              bgColor="white"
-              Icon={<div className={styles.outline_circle} />}
-            />
-            <Task
-              taskName="5 more tasks"
-              hasBorder
-              bgColor="white"
-              Icon={<AiFillPlusCircle />}
-            />
-          </div>
+          <ul>
+           {TaskList}
+          </ul>
         </main>
       </div>
     </>

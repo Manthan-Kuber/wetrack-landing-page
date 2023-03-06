@@ -7,6 +7,10 @@ import IconsList from "@/components/IconsList";
 import MediaButtons from "@/components/MediaButtons";
 import Avatar from "@/components/Avatar";
 import olga from "../../public/olga-nayda-fHXpgMd_XhE-unsplash.jpg";
+import nico from "../../public/nicolas-horn-MTZTGvDsHFY-unsplash.jpg";
+import vicky from "../../public/vicky-hladynets-C8Ta0gwPbQg-unsplash.jpg";
+import Tag from "@/components/Tag";
+import CardRow from "@/components/CardRow";
 
 const gothic = Gothic_A1({
   subsets: ["latin"],
@@ -112,9 +116,22 @@ export default function Home() {
               </div>
             </div>
             {/* Double card */}
-            <div>
+            <div className={styles.doublecard}>
               {/* Card 1 */}
-              <div></div>
+              <div className={styles.doublecard_design}>
+                <div className={styles.doublecard_design_tag_wrapper}>
+                  <Tag bgColor={"#f59fec"}>Design</Tag>
+                  <Tag bgColor={"#f2f2f2"} txtColor={"#878787"}>
+                    3 Tasks
+                  </Tag>
+                </div>
+                <CardRow
+                  title="Design System"
+                  time={"27:40:12"}
+                  avatar1={vicky}
+                  avatar2={nico}
+                />
+              </div>
               {/* Card 2  */}
               <div></div>
             </div>

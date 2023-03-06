@@ -106,7 +106,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .employee_info_wrapper{
@@ -118,6 +118,19 @@
 .employee_salary{
     color: #bfa1fa;
     font-weight: 600;
+}
+
+.doublecard{
+    position: relative;
+}
+
+.doublecard_design{
+    composes:card;
+}
+
+.doublecard_design_tag_wrapper{
+    display: flex;
+    justify-content: space-between;
 }
 
 

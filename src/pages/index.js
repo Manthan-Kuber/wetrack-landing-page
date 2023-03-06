@@ -69,6 +69,7 @@ const DesignCardRowList = [
   </li>
 ));
 
+
 const FrontEndRowList = [
   {
     id: 1,
@@ -161,6 +162,7 @@ const TaskList = [
       txtColor={txtColor}
       hasBorder
     />
+     {id === 1 && <div className={styles.fade} /> }
   </li>
 ));
 
@@ -276,8 +278,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          {/* List of smol task list */}
-          <ul>
+          {/* FIXME Fix fade*/}
+          <ul className={styles.tasklist_container} >
            {TaskList}
           </ul>
         </main>

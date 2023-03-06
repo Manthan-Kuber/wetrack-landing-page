@@ -1,18 +1,20 @@
 .main{
-    margin: 2rem;
+    margin: 4rem;
 }
 
 .container{
     display: flex;
+    justify-content: space-between;
     gap: 4rem;
 }
 
 .container h1{
-    font-size: 4rem;
+    font-size: 6rem;
+    margin-bottom: 2rem;
 }
 
 .left{
-    width: 70ch;
+    width: 105ch;
 }
 
 .left span{
@@ -31,7 +33,7 @@
 }
 
 .trusted {
-    margin-top: 0.5rem;
+    margin-top: 4rem;
 }
 
 .trusted span{
@@ -153,25 +155,33 @@
     height: 1rem;
     border-radius: 999px;
     border: 1px solid black;
+    background-color: white;
 }
 
 .tasklist_container {
     display: flex;
     position: relative;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
+    margin-top: 4rem;
 }
 
 .fade {
     position: absolute;
-    bottom: 0px;
+    top: 0px;
     display: block;
-    width: 100%;
-    padding: 1rem;
-    background-image: linear-gradient(to bottom, 
+    width: 35%;
+    padding: 2rem;
+    background-image: linear-gradient(to left, 
         rgba(255, 255, 255, 0), 
         rgba(255, 255, 255, 0.9)
     100%);
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 

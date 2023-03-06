@@ -69,7 +69,6 @@ const DesignCardRowList = [
   </li>
 ));
 
-
 const FrontEndRowList = [
   {
     id: 1,
@@ -162,7 +161,7 @@ const TaskList = [
       txtColor={txtColor}
       hasBorder
     />
-     {id === 1 && <div className={styles.fade} /> }
+    {id === 1 && <div className={styles.fade} />}
   </li>
 ));
 
@@ -204,7 +203,7 @@ export default function Home() {
                 <IconsList />
               </div>
             </div>
-            <div>
+            <div className={styles.right}>
               {/* Project */}
               <div className={styles.project}>
                 <div className={styles.project_name}>
@@ -278,10 +277,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          {/* FIXME Fix fade*/}
-          <ul className={styles.tasklist_container} >
-           {TaskList}
-          </ul>
+          <ul className={styles.tasklist_container}>{TaskList}</ul>
         </main>
       </div>
     </>

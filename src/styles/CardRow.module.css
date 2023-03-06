@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-block: 0.75rem;
 }
 
 .outline_circle{
@@ -14,4 +15,32 @@
     height: 1rem;
     border-radius: 999px;
     border: 1px solid black;
+}
+
+.title{
+    font-weight: 500;
+}
+
+.time{
+    composes:title;
+    color:#878787 ;
+    align-self: center;
+}
+
+.avatar_container{
+    display: flex;
+    position: relative;
+    margin-left: 2rem;
+}
+
+.avatar_wrapper {
+    position: absolute;
+    z-index: -1;
+    right: 1.5rem;
+}
+
+.separator{
+    background-color: #f3f3f3;
+    border: 1px solid #f3f3f3;
+    width: 100%;
 }

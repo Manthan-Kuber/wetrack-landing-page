@@ -30,6 +30,42 @@ const rubik = Rubik({
   variable: "--rubik-font",
 });
 
+const CardRowList = [
+  {
+    id: 1,
+    title: "Design System",
+    time: "27:40:12",
+    avatar1: olga,
+    avatar2: nico,
+    hasSeparator: true,
+  },
+  {
+    id: 2,
+    title: "Platform Structure",
+    time: "34:28:35",
+    avatar1: nico,
+    avatar2: vicky,
+    hasSeparator: true,
+  },
+  {
+    id: 3,
+    title: "Design Review",
+    time: "19:35:54",
+    avatar1: olga,
+    avatar2: vicky,
+    hasSeparator: false,
+  },
+].map(({ id, time, title, avatar1, avatar2, hasSeparator }) => (
+  <CardRow
+    key={id}
+    time={time}
+    title={title}
+    avatar1={avatar1}
+    avatar2={avatar2}
+    hasSeparator={hasSeparator}
+  />
+));
+
 export default function Home() {
   return (
     <>
@@ -125,12 +161,7 @@ export default function Home() {
                     3 Tasks
                   </Tag>
                 </div>
-                <CardRow
-                  title="Design System"
-                  time={"27:40:12"}
-                  avatar1={vicky}
-                  avatar2={nico}
-                />
+                {CardRowList}
               </div>
               {/* Card 2  */}
               <div></div>

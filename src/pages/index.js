@@ -5,11 +5,13 @@ import { Gothic_A1, Zilla_Slab, Rubik } from "next/font/google";
 import Button from "@/components/Button";
 import IconsList from "@/components/IconsList";
 import MediaButtons from "@/components/MediaButtons";
+import Avatar from "@/components/Avatar";
+import olga from "../../public/olga-nayda-fHXpgMd_XhE-unsplash.jpg";
 
 const gothic = Gothic_A1({
   subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
-  variable:"--gothic-font"
+  variable: "--gothic-font",
 });
 
 const zilla = Zilla_Slab({
@@ -77,7 +79,38 @@ export default function Home() {
               </div>
             </div>
             {/* Employee  */}
-            <div></div>
+            <div className={styles.employee}>
+              <div className={styles.employee_content_wrapper}>
+                {/* Left */}
+                <div className={styles.employee_left}>
+                  <div>
+                    <span className={styles.employee_card_subtext}>
+                      Employee
+                    </span>
+                    <span>Leonard Lauren</span>
+                  </div>
+                  <div className={styles.employee_info_wrapper}>
+                    <div>
+                      <span className={styles.employee_card_subtext}>
+                        Total
+                      </span>
+                      <span>Billable</span>
+                    </div>
+                    <div>
+                      <span className={styles.employee_card_subtext}>
+                        48:00
+                      </span>
+                      <span>42:00</span>
+                    </div>
+                    <div>
+                      <span className={styles.employee_salary}>3,150 USD</span>
+                    </div>
+                  </div>
+                </div>
+                {/* Right */}
+                <Avatar img={olga} size={75} />
+              </div>
+            </div>
             {/* Double card */}
             <div>
               {/* Card 1 */}

@@ -43,25 +43,33 @@
     max-width: fit-content;
 }
 
-.project{
+.card{
     padding: 1rem;
-    background-color: #f59fec;
     border-radius: 1.5rem;
     border: 1px solid black;
     width: 30rem;
+}
+
+.project{
+    composes:card;
+    background-color: #f59fec;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
 }
 
-.project_name {
+.card_subtext{
     color: #a7a7a7;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: x-small;
+}
+
+.project_name {
+    composes:card_subtext;
     display: block;
     display: flex;
     justify-content: space-between;
-    font-size: x-small;
-    letter-spacing: 1px;
-    font-weight: 600;
 }
 
 .timer {
@@ -74,3 +82,42 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.employee{
+    composes:card;
+    background-color: #534fff;
+    color: white;
+}
+
+.employee_content_wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+
+.employee_card_subtext{
+    composes:card_subtext;
+    display: block;
+    font-size: small;
+    margin-bottom: 0.625rem;
+}
+
+.employee_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.employee_info_wrapper{
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.employee_salary{
+    color: #bfa1fa;
+    font-weight: 600;
+}
+
+
